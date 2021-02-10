@@ -1,0 +1,21 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(166.62deg, #FD9843 9.25%, #E35D6A 100.9%);
+    height: 100%;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.text-title {
+    font-size: 32px;
+}
+
+.btn-signup {
+    background-color: rgba(255, 255, 255, 0.15);
+}
