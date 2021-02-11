@@ -1,17 +1,10 @@
 <!doctype html>
+
 <html lang="pt-BR">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link href="styles/app.css" rel="stylesheet">
-
+  <sergey-import src="head">
     <title>App Vacinas</title>
-  </head>
+  </sergey-import>
 
   <body class="d-grid align-items-center h-100">
 
@@ -24,7 +17,7 @@
       </div>
 
       <div class="row justify-content-center">
-          <form class="col-lg-6 p-4 d-grid gap-3 shadow-sm bg-body rounded">
+          <form class="col-lg-6 p-4 d-grid gap-3 shadow-sm bg-body rounded" action="/paciente/login/">
               <label for="inputEmail" class="visually-hidden">Email address</label>
               <input type="email" id="inputEmail" class="form-control form-control-lg" placeholder="Digite seu e-mail" required autofocus>
               <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
@@ -32,13 +25,13 @@
       </div>
 
       <div class="row mt-4 d-grid gap-2 col-md-4 mx-auto">
-        <p class="text-center text-white fs-5 mb-2">Ainda não possui cadastro?</p>
-        <button class="btn btn-outline-light btn-sm btn-signup" type="button">Cadastre-se gratuitamente</button>
+        <p class="text-center text-white fs-5 mb-0">Ainda não possui cadastro?</p>
+        <button class="btn btn-outline-light btn-signup" type="button">Cadastre-se gratuitamente</button>
       </div>
 
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <sergey-import src="scripts" />
 
   </body>
   
