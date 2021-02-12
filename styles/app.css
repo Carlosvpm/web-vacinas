@@ -34,3 +34,8 @@ body {
     height: 240px;
     z-index: -9999;
 }
+
+.selfie {
+    width: 460px;
+    height: auto;
+}
