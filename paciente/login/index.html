@@ -27,12 +27,15 @@
             </div>
 
             <div class="row shadow-sm d-grid gap-2 bg-body rounded p-3">
-                <div class="col p-0 text-center">
-                    <img class="rounded mw-100 selfie" src="/assets/selfie.png" />
+
+                <div class="col p-0 rounded bg-dark ratio ratio-1x1 position-relative overflow-hidden">
+                    <img class="selfie position-absolute top-50 start-50 translate-middle" src="/assets/selfie.png" />
                 </div>
+                
                 <form class="col text-center d-grid p-0 d-md-block" action="/paciente/verificacao/" method="GET">
                     <button class="btn btn-lg btn-primary">Capturar</button>
                 </form>
+            
             </div>
 
         </main>
