@@ -1,21 +1,10 @@
 <!doctype html>
 <html lang="pt-BR">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-    
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <link href="/styles/app.css" rel="stylesheet">
-    
-        <title>App Vacinas - Captura</title>
-    </head>
+    <sergey-import src="head" />
    
     <body class="menu-fix bg-solid">
 
-        <sergey-import src="nav" />
+        <sergey-import src="nav_login" />
 
         <div class="page-header fixed-top"></div>
 
@@ -28,8 +17,8 @@
 
             <div class="row shadow-sm d-grid gap-2 bg-body rounded p-3">
 
-                <div class="col p-0 rounded bg-dark ratio ratio-1x1 position-relative overflow-hidden">
-                    <img class="selfie position-absolute top-50 start-50 translate-middle" src="/assets/selfie.png" />
+                <div class="col p-0 rounded bg-secondary selfie d-grid justify-content-center align-content-center" style="height: 320px;">
+                    <img src="/assets/btn_camera.png" width="96" height="96" />
                 </div>
                 
                 <form class="col text-center d-grid p-0 d-md-block" action="/paciente/verificacao/" method="GET">
@@ -37,6 +26,8 @@
                 </form>
             
             </div>
+
+            <sergey-import src="footer" />
 
         </main>
 
