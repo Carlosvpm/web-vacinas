@@ -2,47 +2,43 @@
 <html lang="pt-BR">
     <sergey-import src="head" />
    
-    <body class="menu-fix bg-solid">
+    <body class="d-grid align-items-center h-100" onload="modalShow()">
 
-        <sergey-import src="nav_login" />
+        <main class="container p-4 d-grid gap-4">
+    
+          <div class="row justify-content-center">
+            <sergey-import src="logo" />
 
-        <div class="page-header fixed-top"></div>
-
-        <main class="container p-4">
-
-            <div class="row mb-2">
-                <h4 class="text-white col">Login</h4>
-                <p class="text-end text-white col">Tire uma selfie</p>
+            <div class="row justify-content-center mt-0">
+              <h5 class="col-lg-6 text-center text-light">Mapeamento da Aplicação de Vacinas</h5>
             </div>
-
-            <div class="row shadow-sm bg-body rounded d-grid gap-2 p-3">
-                
-                <div class="col p-0 rounded bg-secondary overflow-hidden text-center position-relative">
-                    <img class="selfie" src="/assets/selfie.png" />
-                </div>
-
-                <div class="col text-center d-grid p-0 d-md-block">
-                    <button class="btn btn-lg btn-danger" type="submit" disabled>
-                        Erro de autenticação
-                    </button>
-                </div>
-                
+          </div>
+    
+          <div class="row justify-content-center">
+              <form class="col-lg-6 p-3 d-grid gap-3 shadow-sm bg-body rounded" action="/paciente/login/">
+                  <label for="inputEmail" class="visually-hidden">Email address</label>
+                  <input type="email" id="inputEmail" class="form-control form-control-lg" placeholder="Digite seu e-mail" required autofocus>
+                  <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
+              </form>
+          </div>
+    
+          <div class="row my-1 d-grid gap-2 col-lg-6 mx-auto">
+            <p class="text-center text-white fs-5 mb-0">Ainda não possui cadastro?</p>
+            <button class="btn btn-outline-light btn-signup" type="button">Cadastre-se gratuitamente</button>
+          </div>
+          
+          <div class="row mt-2">
+            <div class="col-lg-6 d-grid gap-2 shadow-sm bg-body rounded px-3 py-2 mx-auto">
+              <p class="text-center mb-0 fw-light"><small>Desenvolvido por</small></p>
+              <span class="border-bottom"></span>
+              <img class="logo-parceiros mx-auto d-block" src="/assets/logos_parceiros.png" />
             </div>
-
-            <sergey-import src="footer" />
-
-            <!-- APAGAR -->
-            <div class="row mt-4">
-                <div class="col text-center">
-                    <button class="btn btn-sm btn-outline-secondary" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Abrir notificação</button>
-                </div>
-            </div>
-            <!-- APAGAR -->
-
+          </div>
+    
         </main>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal fade" id="authError" tabindex="-1" aria-labelledby="authError" aria-hidden="false" data-bs-backdrop="static" data-bs-keyboard="false">
             <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -59,6 +55,13 @@
         </div>
 
         <sergey-import src="scripts" />
+
+        <script type="text/javascript">
+            var myModal = new bootstrap.Modal(document.getElementById('authError'), { backdrop: 'static' })
+            function modalShow() {
+                myModal.toggle()
+            }
+        </script>
 
     </body>
   
