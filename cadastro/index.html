@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+    <sergey-import src="head" />
+   
+    <body class="menu-fix bg-solid">
+
+        <sergey-import src="nav_logout" />
+
+        <div class="page-header fixed-top"></div>
+
+        <main class="container p-4">
+
+            <sergey-import src="header">
+                <sergey-template name="page-title">Cadastro</sergey-template>
+                <sergey-template name="page-desc">Passo 1 de 3</sergey-template>
+            </sergey-import>
+
+            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-3">
+                
+                <div class="col px-0">
+                    <h5>Siga os passos a seguir para fazer o cadastro. É fácil e rápido!</h5>
+                </div>
+                
+                <div class="d-grid gap-3 px-0 mb-5">
+
+                    <a class="btn text-start d-grid pt-3 pb-2 btn-icon shadow-sm" role="button" href="/cadastro/paciente/">
+                        <img class="mb-1" src="/assets/icon_syringe.png" width="24" height="24">
+                        Quero ser vacinado
+                    </a>
+                    
+                    <a class="btn text-start d-grid pt-3 pb-2 btn-icon shadow-sm" role="button" href="#">
+                        <img class="mb-1" src="/assets/icon_health.png" width="24" height="24">
+                        Sou Agente de Saúde
+                    </a>
+                    
+                </div>
+            
+            </div>
+
+            <sergey-import src="footer" />
+
+        </main>
+
+        <sergey-import src="modal_cancel_registration" />
+
+        <sergey-import src="scripts" />
+
+    </body>
+  
+</html>

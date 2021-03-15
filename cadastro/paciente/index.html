@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+    <sergey-import src="head" />
+   
+    <body class="menu-fix bg-solid">
+
+        <sergey-import src="nav_logout" />
+
+        <div class="page-header fixed-top"></div>
+
+        <main class="container p-4">
+
+            <sergey-import src="header">
+                <sergey-template name="page-title">Cadastro</sergey-template>
+                <sergey-template name="page-desc">Passo 1 de 3</sergey-template>
+            </sergey-import>
+
+            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1">
+                
+                <div class="col pt-3">
+                    <h5>Selecione o tipo de documento.</h5>
+                </div>
+                
+                <div class="col mb-5">
+
+                    <div class="row row-cols-2 g-2">
+
+                        <div class="col">
+                            <a class="col-12 btn text-start btn-icon shadow-sm" role="button" href="/cadastro/paciente/rg/">
+                                <img class="icon mb-1 d-block" src="/assets/icon_id.png" width="24" height="24">
+                                RG
+                            </a>
+                        </div>
+                        
+                        <div class="col">
+                            <a class="col-12 btn text-start btn-icon shadow-sm" role="button" href="#">
+                                <img class="mb-1 d-block" src="/assets/icon_id.png" width="24" height="24">
+                                CNH
+                            </a>  
+                        </div>
+                    
+                        <div class="col">
+                            <a class="col-12 btn text-start btn-icon shadow-sm" role="button" href="#">
+                                <img class="mb-1 d-block" src="/assets/icon_book.png" width="24" height="24">
+                                Passaporte
+                            </a>  
+                        </div>
+                        
+                        <div class="col">
+                            <a class="col-12 btn text-start btn-icon shadow-sm" role="button" href="#">
+                                <img class="mb-1 d-block" src="/assets/icon_book.png" width="24" height="24">
+                                CTPS
+                            </a>    
+                        </div> 
+
+                    </div>
+                    
+                </div>
+            
+            </div>
+
+            <sergey-import src="footer" />
+
+        </main>
+
+        <sergey-import src="modal_cancel_registration" />
+
+        <sergey-import src="scripts" />
+
+    </body>
+  
+</html>
