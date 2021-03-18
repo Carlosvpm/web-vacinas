@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+    <sergey-import src="head" />
+   
+    <body class="menu-fix bg-solid">
+
+        <sergey-import src="nav_logout" />
+
+        <div class="page-header fixed-top"></div>
+
+        <main class="container p-4">
+
+            <sergey-import src="header">
+                <sergey-template name="page-title">Cadastro</sergey-template>
+                <sergey-template name="page-desc">Passo 2 de 3</sergey-template>
+            </sergey-import>
+
+            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1">
+                
+                <div class="col pt-3">
+                    <h5>Capture a imagem do seu RG.</h5>
+                </div>
+                
+                <div class="col">
+
+                    <div class="row row-cols-1 g-2">
+                        
+                        <div class="col">
+                            <a class="d-block text-start btn-docs btn-docs-valid p-3" role="button" href="#">
+                                <div class="row d-grid">
+                                    <div class="col text-center">
+                                        <img class="mt-1 mb-2 selfie-valid" src="/assets/img_selfie.png" width="160" height="160" />    
+                                    </div>
+                                    <div class="col text-center mt-2">
+                                        <img class="icon" src="/assets/icon_double_check.png" width="24" height="24">
+                                        <span class="align-self-center">Imagem válida</span>
+                                    </div>
+                                </div>
+                            </a>  
+                        </div>
+        
+                    </div>
+
+                </div>
+
+                <div class="col mb-3">
+                    <div class="d-grid d-block">
+                        <a class="btn btn-primary" role="button" href="/registration/paciente/form/">Próximo passo</a>
+                    </div>
+                </div>
+            
+            </div>
+
+            <sergey-import src="footer" />
+
+        </main>
+
+        <sergey-import src="modal_cancel_registration" />
+
+        <sergey-import src="scripts" />
+
+    </body>
+  
+</html>

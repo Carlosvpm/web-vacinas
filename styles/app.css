@@ -51,19 +51,54 @@ body {
     background-color: #CA6510;
 }
 
+.btn-docs {
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.btn-docs-default {
+    color: #0A58CA;
+    background-color: #CFE2FF;
+    border-color: #9EC5FE;
+}
+
+.btn-docs-valid {
+    color: #13795B;
+    background-color: #D2F4EA;
+    border-color: #1AA179;
+}
+.btn-docs-invalid {
+    color: #B02A37;
+    background-color: #F8D7DA;
+    border-color: #DC3545;
+}
+
+.icon-docs {
+    width: 100%;
+    height: auto;
+}
+
+.selfie-default {
+    border-radius: 6px;
+    border: 1px solid #9EC5FE;
+}
+
+.selfie-valid {
+    border-radius: 6px;
+    border: 1px solid #1AA179;
+}
+
+.selfie-invalid {
+    border-radius: 6px;
+    border: 1px solid #DC3545;
+}
+
 .page-header {
     background: linear-gradient(166.62deg, #FD9843 9.25%, #E35D6A 100.9%);
     height: 240px;
     z-index: -9999;
-}
-
-.selfie {
-    max-height: 320px;
-    max-width: 100%;
-}
-
-.selfie-container {
-    background-image: url("/assets/selfie.png");
 }
 
 .disclaimer {
@@ -82,4 +117,8 @@ body {
     background-color: rgba(0,0,0,0.75); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
+}
+
+form.registration label {
+    color: #CA6510;
 }

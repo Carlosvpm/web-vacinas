@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+    <sergey-import src="head" />
+   
+    <body class="menu-fix bg-solid">
+
+        <sergey-import src="nav_logout" />
+
+        <div class="page-header fixed-top"></div>
+
+        <main class="container p-4">
+
+            <sergey-import src="header">
+                <sergey-template name="page-title">Cadastro</sergey-template>
+                <sergey-template name="page-desc">Passo 3 de 3</sergey-template>
+            </sergey-import>
+
+            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1 justify-content-center">
+                
+                <div class="col pt-3">
+                    <h5>Informe seus dados.</h5>
+                </div>
+
+                <div class="col mb-3">
+
+                    <form class="row registration d-grid gap-4 justify-content-center needs-validation" novalidate>
+                        <div class="col">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">
+                                Por favor, preencha este campo corretamente.
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="fullName" class="form-label">Nome completo</label>
+                            <input type="text" class="form-control" id="fullName" required>
+                            <div class="invalid-feedback">
+                                Por favor, preencha este campo corretamente.
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input type="number" class="form-control" id="cpf" required>
+                            <div class="invalid-feedback">
+                                Por favor, preencha este campo corretamente.
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="mothersName" class="form-label">Nome da mãe</label>
+                            <input type="text" class="form-control" id="mothersName" required>
+                            <div class="invalid-feedback">
+                                Por favor, preencha este campo corretamente.
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="birthDate" class="form-label">Data de nascimento</label>
+                            <input type="date" class="form-control" id="birthDate" required>
+                            <div class="invalid-feedback">
+                                Por favor, preencha este campo corretamente.
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="terms" required>
+                                <label class="form-check-label text-body" for="terms">Li e concordo com os <a href="#" data-bs-toggle="modal" data-bs-target="#useTerms">Termos de Uso</a> e a <a href="#" data-bs-toggle="modal" data-bs-target="#privacy">Política de Privacidade</a></label>    
+                                <div class="invalid-feedback">
+                                    Por favor, aceite os termos antes de concluir.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-grid">
+                            <button type="submit" class="btn btn-primary">Concluir</button>
+                        </div>
+                    </form>
+                        
+                </div>
+                
+            </div>
+
+            <sergey-import src="footer" />
+
+        </main>
+
+        <sergey-import src="modal_cancel_registration" />
+
+        <!-- Modal Termos de Uso -->
+        <sergey-import src="modal_terms" />
+        
+        <!-- Modal Política de Privacidade -->
+        <sergey-import src="modal_privacy" />
+
+        <!-- jQuery usado no formulário -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        
+        <!-- Script para máscaras do formulário -->
+        <script src="/scripts/jquery.mask.min.js" ></script>
+        
+        <!-- Script Global do Bootstrap -->
+        <sergey-import src="scripts" />
+
+        <!-- Validação do Bootstrap e formatação das máscaras -->
+        <script type="text/javascript">
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+                })
+            })()
+
+            // Máscara do formulário
+            jQuery(document).ready(function($) {
+                $('#cpf').mask('00000000000');
+            })
+        </script>
+
+    </body>
+  
+</html>
