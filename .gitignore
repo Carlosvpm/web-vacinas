@@ -105,3 +105,4 @@ dist
 
 # Public folder for Sergey
 public/
+.DS_Store
