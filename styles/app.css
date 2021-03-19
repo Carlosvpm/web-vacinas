@@ -64,12 +64,15 @@ body {
     border-color: #9EC5FE;
 }
 
-.btn-docs-valid {
+.btn-docs-valid,
+.btn-docs-valid:hover {
     color: #13795B;
     background-color: #D2F4EA;
     border-color: #1AA179;
 }
-.btn-docs-invalid {
+
+.btn-docs-invalid,
+.btn-docs-invalid:hover {
     color: #B02A37;
     background-color: #F8D7DA;
     border-color: #DC3545;
