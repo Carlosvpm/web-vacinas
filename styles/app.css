@@ -30,6 +30,18 @@ body {
     height: auto;
 }
 
+.page-header {
+    background: linear-gradient(166.62deg, #FD9843 9.25%, #E35D6A 100.9%);
+    height: 240px;
+    z-index: -9999;
+}
+
+.page-header-lg {
+    background: linear-gradient(166.62deg, #FD9843 9.25%, #E35D6A 100.9%);
+    height: 320px;
+    z-index: -9999;
+}
+
 .text-title {
     font-size: 32px;
 }
@@ -96,12 +108,6 @@ body {
 .selfie-invalid {
     border-radius: 6px;
     border: 1px solid #DC3545;
-}
-
-.page-header {
-    background: linear-gradient(166.62deg, #FD9843 9.25%, #E35D6A 100.9%);
-    height: 240px;
-    z-index: -9999;
 }
 
 .disclaimer {

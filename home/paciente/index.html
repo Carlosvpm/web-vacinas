@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+    <sergey-import src="head" />
+   
+    <body class="menu-fix bg-solid">
+
+        <sergey-import src="nav" />
+
+        <div class="page-header-lg fixed-top"></div>
+
+        <main class="container p-4">
+
+            <sergey-import src="header_lg">
+                <sergey-template name="user-photo"><img class="shadow-lg mb-2 rounded-circle border border-2 border-white" src="/assets/img_selfie.png" width="96" height="96" /></sergey-template>
+                <sergey-template name="name">João da Silva</sergey-template>
+            </sergey-import>
+
+            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1">
+                
+                <div class="col pt-3">
+                    <div class="row">
+                        <div class="col-auto">
+                            <img src="/assets/icon_calendar.png" width="24" height="24" />
+                        </div>
+                        <div class="col px-0 mx-0">
+                            <h5 class="text-wrap">Agendamento de vacinação</h5>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="col">
+
+                    <div class="row row-cols-1 row-cols-md-2 g-2">
+
+                        <div class="col">
+                            <a class="col-12 btn text-start d-grid pt-3 pb-2 btn-icon shadow-sm" role="button" href="/registration/paciente/">
+                                <img class="mb-1" src="/assets/icon_syringe.png" width="24" height="24">
+                                Quero ser vacinado
+                            </a> 
+                        </div>
+                        
+                        <div class="col">
+                            <a class="col-12 btn text-start d-grid pt-3 pb-2 btn-icon shadow-sm" role="button" href="#">
+                                <img class="mb-1" src="/assets/icon_health.png" width="24" height="24">
+                                Sou Agente de Saúde
+                            </a>    
+                        </div>
+                        
+                    </div>
+                        
+                </div>
+                
+                <div class="col pt-3">
+                    <div class="row">
+                        <div class="col-auto">
+                            <img src="/assets/icon_person.png" width="24" height="24" />
+                        </div>
+                        <div class="col px-0 mx-0">
+                            <h5 class="text-wrap">Meu Perfil</h5>
+                        </div>
+                    </div>                    
+                </div>
+            
+            </div>
+
+            <sergey-import src="footer" />
+
+        </main>
+
+        <sergey-import src="modal_logout" />
+
+        <sergey-import src="scripts" />
+
+    </body>
+  
+</html>
