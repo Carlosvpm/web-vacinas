@@ -4,72 +4,64 @@
    
     <body class="menu-fix bg-solid">
 
-        <sergey-import src="nav_logout" />
+        <sergey-import src="nav" />
 
         <div class="page-header fixed-top"></div>
 
         <main class="container p-4">
 
-            <sergey-import src="header">
-                <sergey-template name="page-title">Cadastro</sergey-template>
-                <sergey-template name="page-desc">Passo 3 de 3</sergey-template>
+            <sergey-import src="header_user">
+                <sergey-template name="user-photo"><img class="shadow mb-2 rounded-circle border border-2 border-white" src="/assets/img_selfie.png" width="48" height="48" /></sergey-template>
+                <sergey-template name="name">João da Silva</sergey-template>
             </sergey-import>
 
-            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1 justify-content-center">
+            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1">
                 
                 <div class="col pt-3">
-                    <h5>Informe seus dados.</h5>
+                    <h5>Editar perfil</h5>
                 </div>
 
                 <div class="col mb-3">
 
-                    <form class="row registration d-grid gap-4 justify-content-center needs-validation" novalidate>
+                    <form class="row registration d-grid gap-4 needs-validation" novalidate>
                         <div class="col">
                             <label for="email" class="form-label">E-mail</label>
-                            <input type="email" class="form-control" id="email" required>
+                            <input type="email" class="form-control" id="email" value="joao.silva@email.com.br" required>
                             <div class="invalid-feedback">
                                 Por favor, preencha este campo corretamente.
                             </div>
                         </div>
                         <div class="col">
                             <label for="fullName" class="form-label">Nome completo</label>
-                            <input type="text" class="form-control" id="fullName" required>
+                            <input type="text" class="form-control" id="fullName" value="João da Silva" required>
                             <div class="invalid-feedback">
                                 Por favor, preencha este campo corretamente.
                             </div>
                         </div>
                         <div class="col">
                             <label for="cpf" class="form-label">CPF</label>
-                            <input type="number" class="form-control" id="cpf" placeholder="00000000000" required>
+                            <input type="number" class="form-control" id="cpf" value="12345678901" placeholder="00000000000" required>
                             <div class="invalid-feedback">
                                 Por favor, preencha este campo corretamente.
                             </div>
                         </div>
                         <div class="col">
                             <label for="mothersName" class="form-label">Nome da mãe</label>
-                            <input type="text" class="form-control" id="mothersName" required>
+                            <input type="text" class="form-control" id="mothersName" value="Maria da Silva" required>
                             <div class="invalid-feedback">
                                 Por favor, preencha este campo corretamente.
                             </div>
                         </div>
                         <div class="col">
                             <label for="birthDate" class="form-label">Data de nascimento</label>
-                            <input type="date" class="form-control" id="birthDate" required>
+                            <input type="date" class="form-control" id="birthDate" value="1986-06-13" required>
                             <div class="invalid-feedback">
                                 Por favor, preencha este campo corretamente.
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="terms" required>
-                                <label class="form-check-label text-body" for="terms">Li e concordo com os <a href="#" data-bs-toggle="modal" data-bs-target="#useTerms">Termos de Uso</a> e a <a href="#" data-bs-toggle="modal" data-bs-target="#privacy">Política de Privacidade</a></label>    
-                                <div class="invalid-feedback">
-                                    Por favor, aceite os termos antes de concluir.
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="col d-grid">
-                            <button type="submit" class="btn btn-primary">Concluir</button>
+                            <button type="submit" class="btn btn-primary">Salvar</button>
                         </div>
                     </form>
                         
@@ -81,7 +73,7 @@
 
         </main>
 
-        <sergey-import src="modal_cancel_registration" />
+        <sergey-import src="modal_logout" />
 
         <!-- Modal Termos de Uso -->
         <sergey-import src="modal_terms" />

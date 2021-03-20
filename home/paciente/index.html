@@ -6,18 +6,18 @@
 
         <sergey-import src="nav" />
 
-        <div class="page-header-lg fixed-top"></div>
+        <div class="user-header-lg fixed-top"></div>
 
         <main class="container p-4">
 
-            <sergey-import src="header_lg">
-                <sergey-template name="user-photo"><img class="shadow-lg mb-2 rounded-circle border border-2 border-white" src="/assets/img_selfie.png" width="96" height="96" /></sergey-template>
+            <sergey-import src="header_user_lg">
+                <sergey-template name="user-photo"><img class="shadow mb-2 rounded-circle border border-2 border-white" src="/assets/img_selfie.png" width="96" height="96" /></sergey-template>
                 <sergey-template name="name">João da Silva</sergey-template>
             </sergey-import>
 
             <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1">
                 
-                <div class="col pt-3">
+                <div class="col pt-3 mb-1">
                     <div class="row">
                         <div class="col-auto">
                             <img src="/assets/icon_calendar.png" width="24" height="24" />
@@ -30,27 +30,31 @@
 
                 <div class="col">
 
-                    <div class="row row-cols-1 row-cols-md-2 g-2">
+                    <div class="row row-cols-2 g-2">
 
-                        <div class="col">
-                            <a class="col-12 btn text-start d-grid pt-3 pb-2 btn-icon shadow-sm" role="button" href="/registration/paciente/">
-                                <img class="mb-1" src="/assets/icon_syringe.png" width="24" height="24">
-                                Quero ser vacinado
-                            </a> 
+                        <div class="col-auto col-md-6">
+                            <a class="col-12 btn text-start btn-icon-light" role="button" href="/schedule/">
+                                <img class="my-1 d-block" src="/assets/icon_add.png" width="24" height="24">
+                                Agendar
+                            </a>
                         </div>
                         
-                        <div class="col">
-                            <a class="col-12 btn text-start d-grid pt-3 pb-2 btn-icon shadow-sm" role="button" href="#">
-                                <img class="mb-1" src="/assets/icon_health.png" width="24" height="24">
-                                Sou Agente de Saúde
-                            </a>    
+                        <div class="col-auto col-md-6">
+                            <a class="col-12 btn text-start btn-icon-light" role="button" href="#">
+                                <img class="my-1 d-block" src="/assets/icon_bookmarks.png" width="24" height="24">
+                                Meus agendamentos
+                            </a>  
                         </div>
                         
                     </div>
                         
                 </div>
+
+                <div class="col">
+                    <hr>
+                </div>
                 
-                <div class="col pt-3">
+                <div class="col mb-1">
                     <div class="row">
                         <div class="col-auto">
                             <img src="/assets/icon_person.png" width="24" height="24" />
@@ -59,6 +63,28 @@
                             <h5 class="text-wrap">Meu Perfil</h5>
                         </div>
                     </div>                    
+                </div>
+
+                <div class="col mb-3">
+
+                    <div class="row row-cols-2 g-2">
+
+                        <div class="col-auto col-md-6">
+                            <a class="col-12 btn text-start btn-icon-light" role="button" href="/profile/">
+                                <img class="my-1 d-block" src="/assets/icon_edit.png" width="24" height="24">
+                                Editar perfil
+                            </a>
+                        </div>
+                        
+                        <div class="col-auto col-md-6">
+                            <a class="col-12 btn text-start btn-icon-light" role="button" href="#">
+                                <img class="my-1 d-block" src="/assets/icon_checklist.png" width="24" height="24">
+                                Cartão de vacinação
+                            </a>  
+                        </div>
+                        
+                    </div>
+                        
                 </div>
             
             </div>

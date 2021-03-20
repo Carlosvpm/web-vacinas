@@ -36,10 +36,17 @@ body {
     z-index: -9999;
 }
 
-.page-header-lg {
+.user-header-lg {
     background: linear-gradient(166.62deg, #FD9843 9.25%, #E35D6A 100.9%);
     height: 320px;
     z-index: -9999;
+}
+
+hr {
+    border-top: 1px solid #E9ECEF;
+    border-bottom: none;
+    opacity: 1;
+    background-color: #E9ECEF;
 }
 
 .text-title {
@@ -56,6 +63,18 @@ body {
     border: none;
     font-size: 20px;
     font-weight: 600;
+}
+
+.btn-icon-light {
+    background-color: #FFE5D0;
+    color: #653208;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn-icon-light:hover {
+    color: #CA6510;
 }
 
 .btn-icon:hover {

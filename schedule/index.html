@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+    <sergey-import src="head" />
+   
+    <body class="menu-fix bg-solid">
+
+        <sergey-import src="nav" />
+
+        <div class="page-header fixed-top"></div>
+
+        <main class="container p-4">
+
+            <sergey-import src="header_user">
+                <sergey-template name="user-photo"><img class="shadow mb-2 rounded-circle border border-2 border-white" src="/assets/img_selfie.png" width="48" height="48" /></sergey-template>
+                <sergey-template name="name">João da Silva</sergey-template>
+            </sergey-import>
+
+            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1">
+                
+                <div class="col pt-3">
+                    <h5>Novo agendamento</h5>
+                </div>
+
+                <div class="col mb-3">
+
+                    <form class="row registration d-grid gap-4 needs-validation" novalidate>
+                        <div class="col">
+                            <label for="name" class="form-label">Quem será vacinado?</label>
+                            <select class="form-select" id="name" required>
+                                <option disabled selected value>Selecione uma opção</option>
+                                <option value="1">João da Silva</option>
+                                <option value="2">Maria da Silva</option>
+                                <option value="3">José da Silva</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Por favor, selecione uma opção.
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <label for="cep" class="form-label">Localização de origem</label>
+                            <div class="input-group">
+                                <span class="input-group-text">CEP</span>
+                                <input type="number" class="form-control" id="cep" placeholder="00000000" required>
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, preencha o CEP.
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <label for="name" class="form-label">Selecione o posto de saúde</label>
+                            <select class="form-select" id="name" required>
+                                <option disabled selected value>Selecione uma opção</option>
+                                <option value="1">Centro</option>
+                                <option value="2">Norte</option>
+                                <option value="3">Sul</option>
+                                <option value="4">Leste</option>
+                                <option value="5">Oeste</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Por favor, selecione uma opção.
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <label for="name" class="form-label">Qual será a vacina?</label>
+                            <select class="form-select" id="name" required>
+                                <option disabled selected value>Selecione uma opção</option>
+                                <option value="1">BCG</option>
+                                <option value="2">Hepatite B</option>
+                                <option value="3">Covid-19</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Por favor, selecione uma opção.
+                            </div>
+                        </div>
+                        
+                        <div class="col">
+                            <label for="date" class="form-label">Selecione a data</label>
+                            <input type="date" class="form-control" id="date" required>
+                            <div class="invalid-feedback">
+                                Por favor, selecione uma data.
+                            </div>
+                        </div>
+                        
+                        <div class="col d-grid">
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                        </div>
+                    </form>
+                        
+                </div>
+                
+            </div>
+
+            <sergey-import src="footer" />
+
+        </main>
+
+        <sergey-import src="modal_logout" />
+
+        <!-- Modal Termos de Uso -->
+        <sergey-import src="modal_terms" />
+        
+        <!-- Modal Política de Privacidade -->
+        <sergey-import src="modal_privacy" />
+
+        <!-- jQuery usado no formulário -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        
+        <!-- Script para máscaras do formulário -->
+        <script src="/scripts/jquery.mask.min.js" ></script>
+        
+        <!-- Script Global do Bootstrap -->
+        <sergey-import src="scripts" />
+
+        <!-- Validação do Bootstrap e formatação das máscaras -->
+        <script type="text/javascript">
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+                })
+            })()
+
+            // Máscara do formulário
+            jQuery(document).ready(function($) {
+                $('#cep').mask('00000000');
+            })
+        </script>
+
+    </body>
+  
+</html>
