@@ -18,7 +18,7 @@
             <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1">
                 
                 <div class="col pt-3">
-                    <h5>Novo agendamento</h5>
+                    <h5>Alterar agendamento</h5>
                 </div>
 
                 <div class="col mb-3">
@@ -27,8 +27,8 @@
                         <div class="col">
                             <label for="name" class="form-label">Quem será vacinado?</label>
                             <select class="form-select" id="name" required>
-                                <option disabled selected value>Selecione uma opção</option>
-                                <option value="1">João da Silva</option>
+                                <option disabled value>Selecione uma opção</option>
+                                <option value="1" selected>João da Silva</option>
                             </select>
                             <div class="invalid-feedback">
                                 Por favor, selecione uma opção.
@@ -39,7 +39,7 @@
                             <label for="cep" class="form-label">Localização de origem</label>
                             <div class="input-group">
                                 <span class="input-group-text">CEP</span>
-                                <input type="number" class="form-control" id="cep" placeholder="00000000" required>
+                                <input type="number" class="form-control" id="cep" placeholder="00000000" value="01234567" required>
                             </div>
                             <div class="invalid-feedback">
                                 Por favor, preencha o CEP.
@@ -49,8 +49,8 @@
                         <div class="col">
                             <label for="name" class="form-label">Selecione o posto de saúde</label>
                             <select class="form-select" id="name" required>
-                                <option disabled selected value>Selecione uma opção</option>
-                                <option value="1">Centro</option>
+                                <option disabled value>Selecione uma opção</option>
+                                <option value="1" selected>Centro</option>
                                 <option value="2">Norte</option>
                                 <option value="3">Sul</option>
                                 <option value="4">Leste</option>
@@ -64,10 +64,10 @@
                         <div class="col">
                             <label for="name" class="form-label">Qual será a vacina?</label>
                             <select class="form-select" id="name" required>
-                                <option disabled selected value>Selecione uma opção</option>
+                                <option disabled value>Selecione uma opção</option>
                                 <option value="1">BCG</option>
                                 <option value="2">Hepatite B</option>
-                                <option value="3">Covid-19</option>
+                                <option value="3" selected>Covid-19</option>
                             </select>
                             <div class="invalid-feedback">
                                 Por favor, selecione uma opção.
@@ -78,7 +78,7 @@
                             <label for="date" class="form-label">Selecione a data</label>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="bi bi-calendar"></i></span>
-                                <input type="text" class="form-control" id="date" placeholder="DD/MM/AAAA" onfocus="(this.type='date')" required>
+                                <input type="date" class="form-control" id="date" placeholder="DD/MM/AAAA" value="2021-04-28" required>
                             </div>
                             <div class="invalid-feedback">
                                 Por favor, selecione uma data.
@@ -89,13 +89,13 @@
                             <label for="time" class="form-label">Selecione o horário</label>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="bi bi-clock"></i></span>
-                                <input type="text" class="form-control" id="time" placeholder="HH:MM" onfocus="(this.type='time')" required>
+                                <input type="time" class="form-control" id="time" placeholder="HH:MM" value="15:30" required>
                             </div>
                             <div class="invalid-feedback">
                                 Por favor, selecione o horário.
                             </div>
                         </div>
-
+                        
                         <div class="w-100 d-none d-md-inline"></div>
                         
                         <div class="col d-grid d-md-inline">

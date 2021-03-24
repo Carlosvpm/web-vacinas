@@ -49,8 +49,23 @@ hr {
     background-color: #E9ECEF;
 }
 
+hr.orange {
+    border-top: 1px solid #FECBA1;
+    border-bottom: none;
+    opacity: 1;
+    background-color: #FECBA1;
+}
+
 .text-title {
     font-size: 32px;
+}
+
+.text-color-orange-dark {
+    color: #CA6510;
+}
+
+.text-color-orange-light {
+    color: #FD7E14;
 }
 
 .btn-signup {
@@ -109,6 +124,25 @@ hr {
     border-color: #DC3545;
 }
 
+.btn-details {
+    color: #CA6510;
+    background-color: #FFE5D0;
+    border: none;
+}
+
+.btn-details:hover {
+    background-color: #CA6510;
+    color: #ffffff;
+}
+
+.btn-details:focus,
+.btn-details:active {
+    color: #fff;
+    background-color: #CA6510;
+    border-color: #CA6510;
+    box-shadow: 0 0 0 0.25rem rgb(202 101 16 / 50%);
+}
+
 .icon-docs {
     width: 100%;
     height: auto;
@@ -149,4 +183,34 @@ hr {
 
 form.registration label {
     color: #CA6510;
+}
+
+.vaccine {
+    font-size: 20px;
+    color: #CA6510;
+    background-color: #FFE5D0;
+}
+
+.vaccine-details {
+    background-color: #FFE5D0;
+}
+
+.vaccine-details-name {
+    border-bottom: 1px solid #FECBA1;
+}
+
+.font-mono-sm {
+    font-size: 11px;
+}
+
+.font-mono-md {
+    font-size: 14px;
+}
+
+.vaccine-date {
+    color: #FD7E14;
+}
+
+table.table-vaccines tr:last-of-type td {
+    border-bottom: none;
 }

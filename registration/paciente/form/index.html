@@ -15,7 +15,7 @@
                 <sergey-template name="page-desc">Passo 3 de 3</sergey-template>
             </sergey-import>
 
-            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1 justify-content-center">
+            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1">
                 
                 <div class="col pt-3">
                     <h5>Informe seus dados.</h5>
@@ -23,7 +23,8 @@
 
                 <div class="col mb-3">
 
-                    <form class="row registration d-grid gap-4 justify-content-center needs-validation" novalidate>
+                    <form class="row row-cols-1 row-cols-md-2 g-4 registration needs-validation" novalidate>
+
                         <div class="col">
                             <label for="email" class="form-label">E-mail</label>
                             <input type="email" class="form-control" id="email" required>
@@ -31,6 +32,7 @@
                                 Por favor, preencha este campo corretamente.
                             </div>
                         </div>
+
                         <div class="col">
                             <label for="fullName" class="form-label">Nome completo</label>
                             <input type="text" class="form-control" id="fullName" required>
@@ -38,6 +40,7 @@
                                 Por favor, preencha este campo corretamente.
                             </div>
                         </div>
+
                         <div class="col">
                             <label for="cpf" class="form-label">CPF</label>
                             <input type="number" class="form-control" id="cpf" placeholder="00000000000" required>
@@ -45,6 +48,7 @@
                                 Por favor, preencha este campo corretamente.
                             </div>
                         </div>
+
                         <div class="col">
                             <label for="mothersName" class="form-label">Nome da mãe</label>
                             <input type="text" class="form-control" id="mothersName" required>
@@ -52,13 +56,21 @@
                                 Por favor, preencha este campo corretamente.
                             </div>
                         </div>
+
                         <div class="col">
                             <label for="birthDate" class="form-label">Data de nascimento</label>
-                            <input type="date" class="form-control" id="birthDate" required>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                                <input type="text" class="form-control" id="birthDate" placeholder="DD/MM/AAAA" onfocus="(this.type='date')" required>
+                                  
+                            </div>
                             <div class="invalid-feedback">
                                 Por favor, preencha este campo corretamente.
                             </div>
                         </div>
+
+                        <div class="w-100 d-none d-md-inline"></div>
+
                         <div class="col">
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="terms" required>
@@ -68,9 +80,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col d-grid">
+
+                        <div class="w-100 d-none d-md-inline"></div>
+                        
+                        <div class="col d-grid d-md-inline">
                             <button type="submit" class="btn btn-primary">Concluir</button>
                         </div>
+
                     </form>
                         
                 </div>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+    <sergey-import src="head" />
+   
+    <body class="menu-fix bg-solid">
+
+        <sergey-import src="nav" />
+
+        <div class="page-header fixed-top"></div>
+
+        <main class="container p-4">
+
+            <sergey-import src="header_user">
+                <sergey-template name="user-photo"><img class="shadow mb-2 rounded-circle border border-2 border-white" src="/assets/img_selfie.png" width="48" height="48" /></sergey-template>
+                <sergey-template name="name">João da Silva</sergey-template>
+            </sergey-import>
+
+            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1">
+                
+                <div class="col pt-3">
+                    <h5>Meus agendamentos</h5>
+                </div>
+
+                <div class="col">
+                    <table class="table table-vaccines lh-sm align-middle">
+                        <tbody>
+                            <tr>
+                                <td class="px-0">Covid-19</td>
+                                <td class="vaccine-date text-center">28/03/2021</td>
+                                <td class="px-0 text-end"><a href="/myschedules/details/" class="btn btn-primary btn-sm btn-details" role="button">Detalhes</a></td>
+                            </tr>
+                            <tr>
+                                <td class="px-0">Poliomelite 1, 2 e 3 (atenuada) - VOP</td>
+                                <td class="vaccine-date text-center">12/04/2021</td>
+                                <td class="px-0 text-end"><a href="/myschedules/details/" class="btn btn-primary btn-sm btn-details" role="button">Detalhes</a></td>
+                            </tr>
+                            <tr>
+                                <td class="px-0">Absorvida hepatite A (inativada)</td>
+                                <td class="vaccine-date text-center">15/04/2021</td>
+                                <td class="px-0 text-end"><a href="/myschedules/details/" class="btn btn-primary btn-sm btn-details" role="button">Detalhes</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col d-grid d-md-inline mb-3 text-center">
+                    <a role="button" class="btn btn-primary" href="/home/paciente/">Voltar</a>
+                </div>
+               
+            </div>
+
+            <sergey-import src="footer" />
+
+        </main>
+
+        <sergey-import src="modal_logout" />
+        
+        <!-- Script Global do Bootstrap -->
+        <sergey-import src="scripts" />
+
+    </body>
+  
+</html>

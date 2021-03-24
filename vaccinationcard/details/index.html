@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+    <sergey-import src="head" />
+   
+    <body class="menu-fix bg-solid">
+
+        <sergey-import src="nav" />
+
+        <div class="page-header fixed-top"></div>
+
+        <main class="container p-4">
+
+            <sergey-import src="header_user">
+                <sergey-template name="user-photo"><img class="shadow mb-2 rounded-circle border border-2 border-white" src="/assets/img_selfie.png" width="48" height="48" /></sergey-template>
+                <sergey-template name="name">João da Silva</sergey-template>
+            </sergey-import>
+
+            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1">
+                
+                <div class="col pt-3">
+                    <h5>Detalhes da vacinação</h5>
+                </div>
+
+                <div class="col mt-2 mb-3">
+
+                    <div class="col-12 vaccine-details rounded p-3">
+
+                        <div class="row px-2">
+                            <div class="col vaccine-details-name mb-3">
+                                <h4 class="text-color-orange-dark text-center mb-3">BCG</h4>
+                            </div>
+                        </div>
+
+                        <div class="row row-cols-2 row-cols-md-4 g-3">
+                            <div class="col">
+                                <p class="font-monospace text-color-orange-light text-uppercase m-0 font-mono-sm fw-bold">Dose aplicada</p>
+                                <p class="m-0">Primeira</p>
+                            </div>
+                            <div class="col">
+                                <p class="font-monospace text-color-orange-light text-uppercase m-0 font-mono-sm fw-bold">Data da vacinação</p>
+                                <p class="m-0">15/2/2021</p>
+                            </div>
+                            <div class="col">
+                                <p class="font-monospace text-color-orange-light text-uppercase m-0 font-mono-sm fw-bold">Fabricante</p>
+                                <p class="m-0">XXXXXXXXX</p>
+                            </div>
+                            <div class="col">
+                                <p class="font-monospace text-color-orange-light text-uppercase m-0 font-mono-sm fw-bold">Lote</p>
+                                <p class="m-0">LT3901</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col">
+                    <p class="mb-0 fw-bold text-color-orange-dark">Identificação do Serviço de Vacinação</p>
+                    <p class="mb-0">Posto Centro</p>
+                    <p>Rua Álvares Penteado, 237</p>
+                </div>
+
+                <div class="col mb-4">
+                    <div class="col bg-light rounded text-center py-3">
+                        <p class="font-monospace m-0 text-color-orange-light text-uppercase font-mono-md fw-bold">Próxima dose</p>
+                        <p class="fw-bold m-0">18 de março de 2021</p>
+                    </div>
+                </div>
+
+                <div class="col d-grid d-md-inline mb-3 text-center">
+                    <a role="button" class="btn btn-primary" href="/vaccinationcard/">Voltar</a>
+                </div>
+
+            </div>
+
+            <sergey-import src="footer" />
+
+        </main>
+
+        <sergey-import src="modal_logout" />
+        
+        <!-- Script Global do Bootstrap -->
+        <sergey-import src="scripts" />
+
+    </body>
+  
+</html>
