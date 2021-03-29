@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+    <sergey-import src="head" />
+   
+    <body class="menu-fix bg-solid">
+
+        <sergey-import src="nav_agent" />
+
+        <div class="page-header fixed-top"></div>
+
+        <main class="container p-4">
+
+            <div class="row mb-3 align-items-center">
+                <div class="col-auto">
+                    <h1 class="text-white">Vacinação</h1>    
+                </div>
+            </div>
+
+            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1">
+                
+                <div class="col pt-3">
+                    <div class="row justify-content-center">
+                        <div class="col-auto ps-0 pe-2">
+                            <i class="bi bi-check2-circle" style="font-size: 2rem; color: #479F76;"></i>
+                        </div>
+                        <div class="col-auto px-0 mx-0 align-self-center">
+                            <h4 class="mb-0">Vacinação confirmada</h4>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="col mt-2 mb-3">
+                    <div class="col-12 vaccine text-center rounded py-2">
+                        Covid-19
+                    </div>
+                </div>
+
+                <div class="col mb-2">
+                    <div class="row row-cols-1 row-cols-md-2">
+                        <div class="col">
+                            <div class="col">
+                                <p class="mb-0 fw-bold text-color-orange-dark">Nome</p>
+                                <p>João da Silva</p>
+                            </div>
+                            <div class="col">
+                                <p class="mb-0 fw-bold text-color-orange-dark">CPF</p>
+                                <p>123.456.789-01</p>
+                            </div>
+                            <div class="col">
+                                <p class="mb-0 fw-bold text-color-orange-dark">Local</p>
+                                <p class="mb-0">Posto Centro</p>
+                                <p>Rua Álvares Penteado, 237</p>
+                            </div>
+                            <div class="col">
+                                <p class="mb-0 fw-bold text-color-orange-dark">Data e horário</p>
+                                <p>28/04/2021 às 15:30</p>
+                            </div>
+                        </div>
+
+                        <div class="col text-center my-3">
+                            <img src="/assets/img_qrcode_selfie.png" width="153" height="179" />
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="col d-grid d-md-inline mb-3 text-center">
+                    <a role="button" class="btn btn-primary" href="/home/agente/">OK</a>
+                </div>
+                
+            </div>
+
+            <sergey-import src="footer" />
+
+        </main>
+
+        <sergey-import src="modal_logout" />
+        
+        <!-- Script Global do Bootstrap -->
+        <sergey-import src="scripts" />
+
+    </body>
+  
+</html>

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt-BR">
+    <sergey-import src="head" />
+   
+    <body class="menu-fix bg-solid">
+
+        <sergey-import src="nav_agent" />
+
+        <div class="page-header fixed-top"></div>
+
+        <main class="container p-4">
+
+            <div class="row mb-3 align-items-center">
+                <div class="col-auto">
+                    <h1 class="text-white">Vacinação</h1>    
+                </div>
+            </div>
+
+            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1">
+                
+                <div class="col pt-3 mb-3">
+                    <h5>Confirme os dados do agendamento.</h5>
+                </div>
+
+                <div class="col">
+                    <div class="row row-cols-1 row-cols-md-2">
+                        <div class="col">
+                            <p class="mb-0 fw-bold text-color-orange-dark">Local</p>
+                            <p class="mb-0">Posto Centro</p>
+                            <p>Rua Álvares Penteado, 237</p>
+                        </div>
+                        <div class="col">
+                            <p class="mb-0 fw-bold text-color-orange-dark">Data e horário</p>
+                            <p>28/04/2021 às 15:30</p>
+                        </div>                        
+                    </div>
+                </div>
+
+                <div class="col">
+                    <hr class="mt-0">
+                </div>
+
+                <div class="col mb-2">
+                    <div class="row row-cols-2">
+                        <div class="col-8">
+                            <div class="col">
+                                <p class="mb-0 fw-bold text-color-orange-dark">Nome</p>
+                                <p>João da Silva</p>
+                            </div>
+                            <div class="col">
+                                <p class="mb-0 fw-bold text-color-orange-dark">CPF</p>
+                                <p>123.456.789-01</p>
+                            </div>
+                            <div class="col">
+                                <p class="mb-0 fw-bold text-color-orange-dark">Data de nascimento</p>
+                                <p>01/02/1981</p>
+                            </div>
+                            <div class="col">
+                                <p class="mb-0 fw-bold text-color-orange-dark">Nome da mãe</p>
+                                <p>Joaquina da Silva</p>
+                            </div>
+                        </div>
+
+                        <div class="col-4 text-end text-md-center">
+                            <img class="rounded img-fluid border border-1" src="/assets/img_selfie.png" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <hr class="mt-0">
+                </div>
+
+                <div class="col mt-2 mb-3">
+                    <div class="col-12 vaccine text-center rounded py-2">
+                        Covid-19
+                    </div>
+                </div>
+
+                <div class="col mb-3">
+
+                    <form class="row row-cols-1 row-cols-md-2 g-4 registration needs-validation" action="/vaccination/confirmation/" novalidate>
+                        
+                        <div class="col">
+                            <label for="dose" class="form-label">Dose</label>
+                            <select class="form-select" id="dose" required>
+                                <option disabled selected value>Selecione uma opção</option>
+                                <option value="1">Primeira</option>
+                                <option value="2">Segunda</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Por favor, selecione uma opção.
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <label for="manufacturer" class="form-label">Fabricante</label>
+                            <input type="text" class="form-control" id="manufacturer" required>
+                            <div class="invalid-feedback">
+                                Por favor, preencha este campo corretamente.
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <label for="expiration" class="form-label">Validade</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                                <input type="text" class="form-control" id="expiration" placeholder="DD/MM/AAAA" onfocus="(this.type='date')" required>
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, preencha este campo corretamente.
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <label for="batch" class="form-label">Lote</label>
+                            <input type="text" class="form-control" id="batch" required>
+                            <div class="invalid-feedback">
+                                Por favor, preencha este campo corretamente.
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="terms" required>
+                                <label class="form-check-label text-body" for="terms">Confirmo a administração da vacina conforme o detalhamento acima.</label>    
+                                <div class="invalid-feedback">
+                                    Por favor, aceite os termos antes de concluir.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-100 d-none d-md-inline"></div>
+                        
+                        <div class="col d-grid d-md-inline">
+                            <button type="submit" class="btn btn-primary">Confirmar vacinação</button>
+                        </div>
+
+                    </form>
+                        
+                </div>
+                
+            </div>
+
+            <sergey-import src="footer" />
+
+        </main>
+
+        <sergey-import src="modal_logout" />
+
+        <!-- jQuery usado no formulário -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        
+        <!-- Script para máscaras do formulário -->
+        <script src="/scripts/jquery.mask.min.js" ></script>
+        
+        <!-- Script Global do Bootstrap -->
+        <sergey-import src="scripts" />
+
+        <!-- Validação do Bootstrap e formatação das máscaras -->
+        <script type="text/javascript">
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+                })
+            })()
+
+            // Máscara do formulário
+            jQuery(document).ready(function($) {
+                $('#cpf').mask('00000000000');
+            })
+        </script>
+
+    </body>
+  
+</html>

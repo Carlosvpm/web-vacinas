@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+    <sergey-import src="head" />
+   
+    <body class="menu-fix bg-solid">
+
+        <sergey-import src="nav_agent" />
+
+        <div class="user-header-lg fixed-top"></div>
+
+        <main class="container p-4">
+
+            <sergey-import src="header_user_lg">
+                <sergey-template name="user-photo"><img class="shadow mb-2 rounded-circle border border-2 border-white" src="/assets/img_selfie_agente.png" width="96" height="96" /></sergey-template>
+                <sergey-template name="name">Maria da Silva</sergey-template>
+            </sergey-import>
+
+            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1">
+                
+                <div class="col pt-3 mb-1">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <img class="mb-1" src="/assets/icon_syringe2.svg" width="24" height="24">
+                        </div>
+                        <div class="col px-0 mx-0">
+                            <h5 class="text-wrap m-0">Vacinas</h5>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="col">
+                    <div class="row row-cols-2 g-2">
+                        <div class="col-4 col-md-6">
+                            <a class="col-12 btn text-start btn-icon-light" role="button" href="#" data-bs-toggle="modal" data-bs-target="#qrCodeError">
+                                <i class="bi bi-plus-circle text-color-orange-dark d-block" style="font-size: 1.5rem;"></i>
+                                <p class="lh-sm mb-1">Iniciar vacinação</p>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <a class="col-12 btn text-start btn-icon-light" role="button" href="/receivingcontrol/">
+                                <i class="bi bi-check2-square text-color-orange-dark d-block" style="font-size: 1.5rem;"></i>
+                                <p class="lh-sm mb-1">Controle de recebimento</p>
+                            </a>  
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <hr class="mb-2">
+                </div>
+                
+                <div class="col mb-1">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <i class="bi bi-person-circle text-color-orange-light" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <div class="col px-0 mx-0">
+                            <h5 class="text-wrap m-0">Meu Perfil</h5>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="col mb-3">
+
+                    <div class="row">
+
+                        <div class="col-auto col-md-6">
+                            <a class="col-12 btn text-start btn-icon-light" role="button" href="/profile/">
+                                <i class="bi bi-pencil text-color-orange-dark d-block" style="font-size: 1.5rem;"></i>
+                                <p class="lh-sm mb-1">Editar perfil</p>
+                            </a>
+                        </div>
+                
+                    </div>
+                        
+                </div>
+            
+            </div>
+
+            <sergey-import src="footer" />
+
+        </main>
+
+        <sergey-import src="modal_logout" />
+
+        <!-- Modal -->
+        <div class="modal fade" id="qrCodeError" tabindex="-1" aria-labelledby="qrCodeError" aria-hidden="false" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Erro de leitura</h5>
+                </div>
+                <div class="modal-body">
+                    QR Code inválido.
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-primary" role="button" href="/vaccination/">Tentar novamente</a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <sergey-import src="scripts" />
+
+    </body>
+  
+</html>

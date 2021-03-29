@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+    <sergey-import src="head" />
+   
+    <body class="menu-fix bg-solid">
+
+        <sergey-import src="nav_agent" />
+
+        <div class="page-header fixed-top"></div>
+
+        <main class="container p-4">
+
+            <div class="row mb-3 align-items-center">
+                <div class="col-auto">
+                    <h1 class="text-white">Controle de recebimento</h1>    
+                </div>
+            </div>
+
+            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1">
+                
+                <div class="col pt-3 mb-3">
+                    <h5>Confirme os dados da caixa de transporte.</h5>
+                </div>
+
+                <div class="col mb-3">
+
+                    <form class="row row-cols-1 row-cols-md-2 g-4 registration needs-validation" action="/receivingcontrol/confirmation/" novalidate>
+                        
+                        <div class="col">
+                            <label for="refNumber" class="form-label fw-bold mb-0">Número referência da caixa</label>
+                            <input type="text" class="form-control-plaintext" id="refNumber" value="71928612897612" readonly>
+                            <div class="invalid-feedback">
+                                Por favor, preencha este campo corretamente.
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <label for="manufacturer" class="form-label fw-bold mb-0">Fabricante</label>
+                            <input type="text" class="form-control-plaintext" id="manufacturer" value="XXXXXXXXXXXXX" readonly>
+                            <div class="invalid-feedback">
+                                Por favor, preencha este campo corretamente.
+                            </div>
+                        </div>
+                        
+                        <div class="col">
+                            <label for="product" class="form-label fw-bold mb-0">Produto/Apresentação</label>
+                            <input type="text" class="form-control-plaintext" id="product" value="Vacina Covid-19/10mg" readonly>
+                            <div class="invalid-feedback">
+                                Por favor, preencha este campo corretamente.
+                            </div>
+                        </div>
+                        
+                        <div class="col">
+                            <label for="quantity" class="form-label fw-bold mb-0">Quantidade por caixa</label>
+                            <input type="text" class="form-control-plaintext" id="quantity" value="100" readonly>
+                            <div class="invalid-feedback">
+                                Por favor, preencha este campo corretamente.
+                            </div>
+                        </div>
+                        
+                        <div class="col">
+                            <label for="batch" class="form-label fw-bold mb-0">Lote</label>
+                            <input type="text" class="form-control-plaintext" id="batch" value="029870923" readonly>
+                            <div class="invalid-feedback">
+                                Por favor, preencha este campo corretamente.
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="terms" required>
+                                <label class="form-check-label text-body" for="terms">Confirmo o recebimento da caixa conforme o detalhamento acima.</label>    
+                                <div class="invalid-feedback">
+                                    Por favor, aceite os termos antes de concluir.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-100 d-none d-md-inline"></div>
+                        
+                        <div class="col d-grid d-md-inline">
+                            <button type="submit" class="btn btn-primary">Confirmar recebimento</button>
+                        </div>
+
+                    </form>
+                        
+                </div>
+
+            </div>
+
+            <sergey-import src="footer" />
+
+        </main>
+
+        <sergey-import src="modal_logout" />
+        
+        <!-- Script Global do Bootstrap -->
+        <sergey-import src="scripts" />
+
+        <!-- Validação do Bootstrap e formatação das máscaras -->
+        <script type="text/javascript">
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+                })
+            })()
+        </script>
+
+    </body>
+  
+</html>

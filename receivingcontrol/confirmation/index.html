@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+    <sergey-import src="head" />
+   
+    <body class="menu-fix bg-solid">
+
+        <sergey-import src="nav_agent" />
+
+        <div class="page-header fixed-top"></div>
+
+        <main class="container p-4">
+
+            <div class="row mb-3 align-items-center">
+                <div class="col-auto">
+                    <h1 class="text-white">Controle de recebimento</h1>    
+                </div>
+            </div>
+
+            <div class="row shadow-sm d-grid gap-2 bg-body rounded p-1">
+                
+                <div class="col pt-3 mb-3">
+                    <div class="row justify-content-center">
+                        <div class="col-auto ps-0 pe-2">
+                            <i class="bi bi-check2-circle" style="font-size: 2rem; color: #479F76;"></i>
+                        </div>
+                        <div class="col-auto px-0 mx-0 align-self-center">
+                            <h4 class="mb-0">Recebimento confirmado</h4>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="col mb-2">
+                    <div class="row row-cols-1 row-cols-md-2">
+                        <div class="col">
+                            <p class="mb-0 fw-bold text-color-orange-dark">Número referência da caixa</p>
+                            <p>71928612897612</p>
+                        </div>
+                        <div class="col">
+                            <p class="mb-0 fw-bold text-color-orange-dark">Fabricante</p>
+                            <p>XXXXXXXXXXXXX</p>
+                        </div>
+                        <div class="col">
+                            <p class="mb-0 fw-bold text-color-orange-dark">Produto/Apresentação</p>
+                            <p>Vacina Covid-19/10mg</p>
+                        </div>
+                        <div class="col">
+                            <p class="mb-0 fw-bold text-color-orange-dark">Quantidade por caixa</p>
+                            <p>100</p>
+                        </div>
+                        <div class="col">
+                            <p class="mb-0 fw-bold text-color-orange-dark">Lote</p>
+                            <p>029870923</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-grid d-md-inline mb-3 text-center">
+                    <a role="button" class="btn btn-primary" href="/home/agente/">OK</a>
+                </div>
+                
+            </div>
+
+            <sergey-import src="footer" />
+
+        </main>
+
+        <sergey-import src="modal_logout" />
+        
+        <!-- Script Global do Bootstrap -->
+        <sergey-import src="scripts" />
+
+    </body>
+  
+</html>
