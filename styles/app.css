@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: linear-gradient(166.62deg, #FD9843 9.25%, #E35D6A 100.9%);
+    background: linear-gradient(166.62deg, rgb(67, 169, 253) 9.25%, #E35D6A 100.9%);
     background-attachment: fixed;
 }
 
@@ -17,7 +17,7 @@ body {
 }
 
 .navbar {
-    background-color: #CA6510;
+    background-color: #1076ca;
 }
 
 .logo {
@@ -31,13 +31,13 @@ body {
 }
 
 .page-header {
-    background: linear-gradient(166.62deg, #FD9843 9.25%, #E35D6A 100.9%);
+    background: linear-gradient(166.62deg, #43b9fd 9.25%, #E35D6A 100.9%);
     height: 240px;
     z-index: -9999;
 }
 
 .user-header-lg {
-    background: linear-gradient(166.62deg, #FD9843 9.25%, #E35D6A 100.9%);
+    background: linear-gradient(166.62deg, #43b3fd 9.25%, #E35D6A 100.9%);
     height: 320px;
     z-index: -9999;
 }
@@ -61,11 +61,11 @@ hr.orange {
 }
 
 .text-color-orange-dark {
-    color: #CA6510;
+    color: #1061ca;
 }
 
 .text-color-orange-light {
-    color: #FD7E14;
+    color: #1424fd;
 }
 
 .btn-signup {
@@ -73,7 +73,7 @@ hr.orange {
 }
 
 .btn-icon {
-    background-color: #FD7E14;
+    background-color: #14edfd;
     color: #ffffff;
     border: none;
     font-size: 20px;
